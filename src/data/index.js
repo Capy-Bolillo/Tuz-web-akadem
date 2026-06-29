@@ -2,6 +2,8 @@ const ringNavy = "linear-gradient(135deg, #1B2D6B, #2B3F86)";
 const ringGold = "linear-gradient(135deg, #C9A84C, #E0C878)";
 const ringGray = "linear-gradient(135deg, #C2C7D2, #DDE1E8)";
 
+const base = import.meta.env.BASE_URL;
+
 export const SERVICES = [
   {
     title: "Diagnóstico Integral Institucional",
@@ -91,7 +93,7 @@ export const TEAM = [
     ring: ringNavy,
     initials: "AT",
     initColor: "#1B2D6B",
-    img: "/assets/person/tuz.webp",
+    img: `${base}assets/person/tuz.webp`,
   },
   {
     name: "Damaris Izel Miss Arcos",
@@ -100,7 +102,7 @@ export const TEAM = [
     ring: ringGold,
     initials: "DM",
     initColor: "#B8923A",
-    img: "/assets/person/damaris.webp",
+    img: `${base}assets/person/damaris.webp`,
   },
   {
     name: "Paula Estefanía Pech Lugo",
@@ -109,7 +111,7 @@ export const TEAM = [
     ring: ringNavy,
     initials: "PP",
     initColor: "#1B2D6B",
-    img: "/assets/person/paula.webp",
+    img: `${base}assets/person/paula.webp`,
   },
   {
     name: "Kenia Estrella Álvarez Castro",
@@ -118,7 +120,7 @@ export const TEAM = [
     ring: ringGold,
     initials: "KA",
     initColor: "#B8923A",
-    img: "/assets/person/kenia.webp",
+    img: `${base}assets/person/kenia.webp`,
   },
   {
     name: "Vacante",
