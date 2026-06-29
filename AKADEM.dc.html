@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: #1F2433; background: #FFFFFF; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #C9A84C; color: #0F1D4A; }
+  [data-reveal] { opacity: 0; transform: translateY(30px); transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1); }
+  [data-reveal].in { opacity: 1; transform: none; }
+  @keyframes ak-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes ak-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #1B2D6B !important; box-shadow: 0 0 0 3px rgba(27,45,107,.10); }
+  ::placeholder { color: #9AA1AE; }
+</style>
+</helmet>
+
+<div style="overflow-x: hidden;">
+
+<nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid #ECEEF2; box-shadow: 0 1px 12px rgba(15,29,74,.05);">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+    <a href="#inicio" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
+      <img src="assets/emblem.png" alt="AKADEM" style="height: 38px; width: auto; display: block;">
+      <span style="font-family: 'Inter'; font-weight: 700; font-size: 22px; letter-spacing: .18em; color: #1B2D6B;">AKA<span style="color: #C9A84C;">·</span>DEM</span>
+    </a>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <a href="#inicio" style="font-size: 14.5px; font-weight: 500; color: #3A4254; text-decoration: none; letter-spacing: .01em;" style-hover="color: #1B2D6B;">Inicio</a>
+      <a href="#nosotros" style="font-size: 14.5px; font-weight: 500; color: #3A4254; text-decoration: none; letter-spacing: .01em;" style-hover="color: #1B2D6B;">Nosotros</a>
+      <a href="#servicios" style="font-size: 14.5px; font-weight: 500; color: #3A4254; text-decoration: none; letter-spacing: .01em;" style-hover="color: #1B2D6B;">Servicios</a>
+      <a href="#testimonios" style="font-size: 14.5px; font-weight: 500; color: #3A4254; text-decoration: none; letter-spacing: .01em;" style-hover="color: #1B2D6B;">Testimonios</a>
+      <a href="#contacto" style="font-size: 14px; font-weight: 600; color: #1B2D6B; text-decoration: none; padding: 9px 18px; border: 1.5px solid #1B2D6B; border-radius: 8px; letter-spacing: .01em; transition: all .2s ease;" style-hover="background: #1B2D6B; color: #FFFFFF;">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="inicio" style="position: relative; background: #15234F; color: #FFFFFF; padding: 152px 0 96px; background-image: radial-gradient(rgba(255,255,255,.06) 1.1px, transparent 1.1px); background-size: 26px 26px;">
+  <div style="position: absolute; inset: 0; background: linear-gradient(110deg, #15234F 0%, #15234F 52%, #1B2D6B 100%);"></div>
+  <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1.18fr .82fr; gap: 56px; align-items: center;">
+    <div>
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #D8BC6A; background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.34); padding: 7px 14px; border-radius: 100px;">Consultoría educativa · Quintana Roo</span>
+      <h1 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.08; letter-spacing: -.02em; margin: 22px 0 0; max-width: 16ch;">Consultoría organizacional especializada en educación</h1>
+      <span style="display: block; width: 168px; height: 4px; background: #C9A84C; border-radius: 2px; margin-top: 24px; transform-origin: left; transform: scaleX(0); animation: ak-draw .9s .35s cubic-bezier(.16,1,.3,1) both;"></span>
+      <p style="font-size: clamp(16px, 1.5vw, 19px); line-height: 1.72; color: #C8CEE0; margin: 28px 0 0; max-width: 52ch;">Transformamos la experiencia de tu institución educativa: mejoramos la comunicación, la atención y la imagen para que tu colegio crezca.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px;">
+        <a href="#contacto" style="display: inline-flex; align-items: center; gap: 9px; background: #C9A84C; color: #15234F; font-weight: 700; font-size: 15.5px; padding: 15px 26px; border-radius: 8px; text-decoration: none; box-shadow: 0 10px 26px rgba(201,168,76,.28); transition: transform .2s ease, box-shadow .2s ease, background .2s ease;" style-hover="background: #D8BC6A; transform: translateY(-2px); box-shadow: 0 14px 32px rgba(201,168,76,.40);">Solicita tu diagnóstico gratuito →</a>
+        <a href="#servicios" style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-weight: 600; font-size: 15.5px; padding: 15px 24px; border-radius: 8px; text-decoration: none; border: 1.5px solid rgba(255,255,255,.28); transition: all .2s ease;" style-hover="border-color: #FFFFFF; background: rgba(255,255,255,.06);">Conoce nuestros servicios</a>
+      </div>
+      <div style="display: flex; gap: 30px; margin-top: 44px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; gap: 3px;"><span style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 26px; color: #D8BC6A;">6</span><span style="font-size: 13px; color: #AFB7CE;">servicios especializados</span></div>
+        <div style="width: 1px; background: rgba(255,255,255,.16);"></div>
+        <div style="display: flex; flex-direction: column; gap: 3px;"><span style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 26px; color: #D8BC6A;">100%</span><span style="font-size: 13px; color: #AFB7CE;">enfocados en educación</span></div>
+        <div style="width: 1px; background: rgba(255,255,255,.16);"></div>
+        <div style="display: flex; flex-direction: column; gap: 3px;"><span style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 26px; color: #D8BC6A;">St.P</span><span style="font-size: 13px; color: #AFB7CE;">primer caso activo</span></div>
+      </div>
+    </div>
+
+    <div style="position: relative;">
+      <div style="position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; background: repeating-linear-gradient(135deg, #20305F 0px, #20305F 11px, #1C2B54 11px, #1C2B54 22px); border: 1.5px dashed rgba(255,255,255,.22); box-shadow: 0 30px 60px rgba(0,0,0,.32);">
+        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; padding: 24px;">
+          <div style="width: 56px; height: 56px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,.3); display: flex; align-items: center; justify-content: center; font-size: 24px; color: rgba(255,255,255,.5);">▦</div>
+          <span style="font-family: ui-monospace, monospace; font-size: 12.5px; letter-spacing: .03em; color: rgba(255,255,255,.62); line-height: 1.5;">// fotografía institucional<br>colegio · alumnos · crecimiento</span>
+        </div>
+      </div>
+      <div style="position: absolute; bottom: -22px; left: -26px; background: #FFFFFF; color: #15234F; border-radius: 12px; padding: 16px 18px; box-shadow: 0 18px 40px rgba(0,0,0,.22); max-width: 240px; animation: ak-float 6s ease-in-out infinite;">
+        <span style="display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #C9A84C;">Primer caso</span>
+        <span style="display: block; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 17px; margin-top: 3px;">Colegio St. Patrick</span>
+        <span style="display: block; font-size: 12.5px; color: #6B7280; margin-top: 2px;">Playa del Carmen, Q. Roo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section id="nosotros" style="background: #FFFFFF; padding: 100px 0;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <div data-reveal style="text-align: center; max-width: 760px; margin: 0 auto;">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C9A84C;">Nosotros</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.02em; color: #15234F; margin: 12px 0 0;">No solo hablamos de mejora. La vivimos desde adentro.</h2>
+      <p style="font-size: 17px; line-height: 1.75; color: #5A6273; margin: 18px 0 0;"><strong style="color: #1B2D6B;">AKADEM</strong> nace de las iniciales de sus integrantes, y su sonido evoca «academia»: educación, aprendizaje y crecimiento. Somos una consultoría formada específicamente en pedagogía, que entiende el lenguaje de las instituciones educativas porque lo estudia todos los días.</p>
+    </div>
+
+    <div data-reveal style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 54px;">
+      <div style="background: #15234F; color: #FFFFFF; border-radius: 16px; padding: 38px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -30px; right: -30px; width: 130px; height: 130px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,.22), transparent 70%);"></div>
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #D8BC6A;">Misión</span>
+        <p style="font-size: 16px; line-height: 1.72; color: #D5DAE9; margin: 14px 0 0;">Brindar servicios especializados de consultoría a escuelas y centros educativos, con estrategias y herramientas que mejoren su organización interna, optimicen sus procesos administrativos y pedagógicos, y fortalezcan su imagen y competitividad en el sector.</p>
+      </div>
+      <div style="background: #F6F7FA; color: #15234F; border-radius: 16px; padding: 38px; border: 1px solid #ECEEF2;">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #C9A84C;">Visión</span>
+        <p style="font-size: 16px; line-height: 1.72; color: #4B5365; margin: 14px 0 0;">Ser una consultoría reconocida por impulsar la transformación de las escuelas y centros educativos, fortaleciendo su organización, innovación y crecimiento para que ofrezcan servicios de calidad y se mantengan competitivas en el sector educativo.</p>
+      </div>
+    </div>
+
+    <div data-reveal style="margin-top: 64px;">
+      <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 26px; color: #15234F; text-align: center; margin: 0 0 6px;">Nuestros valores</h3>
+      <p style="text-align: center; color: #8A91A0; font-size: 14.5px; margin: 0 0 32px;">Lo que sostiene cada recomendación que hacemos.</p>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
+        <sc-for list="{{ valores }}" as="v" hint-placeholder-count="5">
+          <div style="background: #FFFFFF; border: 1px solid #ECEEF2; border-radius: 12px; padding: 24px 20px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 14px 30px rgba(27,45,107,.10); border-color: #C9A84C;">
+            <div style="width: 38px; height: 38px; border-radius: 9px; background: rgba(201,168,76,.14); color: #B8923A; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 17px;">{{ v.n }}</div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #15234F; margin: 16px 0 6px;">{{ v.title }}</h4>
+            <p style="font-size: 13px; line-height: 1.6; color: #6B7280; margin: 0;">{{ v.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div data-reveal style="margin-top: 72px;">
+      <div style="text-align: center; margin-bottom: 38px;">
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 26px; color: #15234F; margin: 0 0 6px;">El equipo</h3>
+        <p style="color: #8A91A0; font-size: 14.5px; margin: 0;">Estudiantes de Pedagogía con una formación hecha para entender tu escuela.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <sc-for list="{{ team }}" as="m" hint-placeholder-count="6">
+          <div style="background: #FFFFFF; border: 1px solid #ECEEF2; border-radius: 14px; padding: 28px 24px; text-align: center; transition: transform .25s ease, box-shadow .25s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 16px 36px rgba(27,45,107,.12);">
+            <div style="width: 96px; height: 96px; margin: 0 auto; border-radius: 50%; padding: 3px; background: {{ m.ring }};">
+              <div style="width: 100%; height: 100%; border-radius: 50%; border: 3px solid #FFFFFF; background: repeating-linear-gradient(135deg, #EEF0F5 0 7px, #E4E7EF 7px 14px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;">
+                <span style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: {{ m.initColor }};">{{ m.initials }}</span>
+                <span style="font-family: ui-monospace, monospace; font-size: 8.5px; letter-spacing: .04em; color: #9AA1AE;">// foto</span>
+              </div>
+            </div>
+            <h4 style="font-size: 17px; font-weight: 700; color: #15234F; margin: 16px 0 4px;">{{ m.name }}</h4>
+            <span style="display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: #B8923A;">{{ m.tag }}</span>
+            <p style="font-size: 13.5px; line-height: 1.6; color: #6B7280; margin: 12px 0 0;">{{ m.role }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <p style="text-align: center; font-size: 13px; color: #9AA1AE; margin: 30px 0 0;">Un proyecto académico de la Licenciatura en Pedagogía del Tecnológico Universitario de Playacar (TUP).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios" style="background: #F3F4F6; padding: 100px 0;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <div data-reveal style="text-align: center; max-width: 720px; margin: 0 auto 50px;">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C9A84C;">Servicios</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.02em; color: #15234F; margin: 12px 0 0;">Soluciones concretas, no teoría.</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: #5A6273; margin: 16px 0 0;">Seis servicios definidos. Cada uno con un objetivo claro, lo que incluye y lo que no — para que sepas exactamente qué estás contratando.</p>
+    </div>
+
+    <div data-reveal style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+        <div style="background: #FFFFFF; border: 1px solid #E7E9EE; border-radius: 14px; padding: 30px 28px; display: flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 16px 38px rgba(27,45,107,.13); border-color: #C9A84C;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="width: 46px; height: 46px; border-radius: 50%; border: 2px solid #C9A84C; color: #B8923A; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px;">{{ s.num }}</span>
+          </div>
+          <h3 style="font-family: 'Inter'; font-weight: 700; font-size: 18.5px; line-height: 1.3; color: #15234F; margin: 20px 0 0;">{{ s.title }}</h3>
+          <p style="font-size: 14px; line-height: 1.62; color: #6B7280; margin: 11px 0 0;">{{ s.ayuda }}</p>
+          <button onClick="{{ s.onToggle }}" style="margin-top: 18px; align-self: flex-start; background: none; border: none; cursor: pointer; font-family: 'Inter'; font-size: 13.5px; font-weight: 600; color: #1B2D6B; padding: 0; display: inline-flex; align-items: center; gap: 6px;" style-hover="color: #C9A84C;">{{ s.label }}<span style="display: inline-block; transition: transform .25s ease; transform: {{ s.caret }};">▾</span></button>
+          <sc-if value="{{ s.open }}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top: 16px; border-top: 1px solid #EDEFF3; padding-top: 16px;">
+              <span style="font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #1B8A5B;">Incluye</span>
+              <ul style="list-style: none; padding: 0; margin: 8px 0 0;">
+                <sc-for list="{{ s.incluye }}" as="it" hint-placeholder-count="3">
+                  <li style="display: flex; gap: 8px; font-size: 13px; line-height: 1.5; color: #444B59; margin-bottom: 6px;"><span style="color: #C9A84C; font-weight: 700;">✓</span>{{ it }}</li>
+                </sc-for>
+              </ul>
+              <span style="display: block; margin-top: 12px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #B0566B;">No incluye</span>
+              <p style="font-size: 13px; line-height: 1.55; color: #8A91A0; margin: 8px 0 0;">{{ s.noIncluye }}</p>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+
+    <div data-reveal style="text-align: center; margin-top: 46px;">
+      <a href="#contacto" style="display: inline-flex; align-items: center; gap: 9px; background: #15234F; color: #FFFFFF; font-weight: 600; font-size: 15.5px; padding: 15px 28px; border-radius: 8px; text-decoration: none; transition: transform .2s ease, background .2s ease;" style-hover="background: #1B2D6B; transform: translateY(-2px);">¿No sabes por dónde empezar? Hablemos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section id="testimonios" style="background: #15234F; color: #FFFFFF; padding: 100px 0; background-image: radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px); background-size: 28px 28px;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <div data-reveal style="text-align: center; max-width: 720px; margin: 0 auto 44px;">
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #D8BC6A;">Testimonios</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.02em; margin: 12px 0 0;">La confianza se construye con resultados.</h2>
+    </div>
+
+    <div data-reveal style="background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); border-radius: 18px; padding: 40px; display: grid; grid-template-columns: .85fr 1.15fr; gap: 40px; align-items: center;">
+      <div>
+        <span style="display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #D8BC6A; background: rgba(201,168,76,.14); border: 1px solid rgba(201,168,76,.32); padding: 6px 13px; border-radius: 100px;">Caso de estudio</span>
+        <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 30px; margin: 18px 0 6px;">Colegio St. Patrick</h3>
+        <p style="font-size: 14.5px; color: #AFB7CE; margin: 0;">Institución privada de nivel básico · Playa del Carmen, Q. Roo</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;">
+        <div style="padding: 0 22px; border-left: 1px solid rgba(255,255,255,.12);">
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #D8BC6A;">Problema</span>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #D5DAE9; margin: 10px 0 0;">Comentarios negativos de padres por la atención y la comunicación, afectando la imagen y la captación de alumnos.</p>
+        </div>
+        <div style="padding: 0 22px; border-left: 1px solid rgba(255,255,255,.12);">
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #D8BC6A;">Intervención</span>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #D5DAE9; margin: 10px 0 0;">Diagnóstico integral, encuesta a padres, guía de entrevista al personal y propuesta completa de servicios.</p>
+        </div>
+        <div style="padding: 0 22px; border-left: 1px solid rgba(255,255,255,.12);">
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #D8BC6A;">Resultado esperado</span>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #D5DAE9; margin: 10px 0 0;">Mejor calidad de servicio, comunicación más clara y una experiencia de atención que retiene familias.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px;">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <div style="background: #FFFFFF; color: #15234F; border-radius: 14px; padding: 28px; display: flex; flex-direction: column;">
+          <span style="font-family: 'Playfair Display', serif; font-size: 44px; line-height: .6; color: #C9A84C;">&ldquo;</span>
+          <p style="font-size: 14.5px; line-height: 1.65; color: #4B5365; margin: 14px 0 0; font-style: italic; flex: 1;">{{ t.quote }}</p>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #EDEFF3;">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: repeating-linear-gradient(135deg, #E7EAF1 0 6px, #DDE1EB 6px 12px); flex-shrink: 0;"></div>
+            <div><span style="display: block; font-size: 14px; font-weight: 700; color: #15234F;">{{ t.name }}</span><span style="display: block; font-size: 12.5px; color: #8A91A0;">{{ t.org }}</span></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <p data-reveal style="text-align: center; font-size: 13px; color: #8A93B2; margin: 26px 0 0;">Espacios reservados para los testimonios de nuestras primeras instituciones aliadas.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" style="background: #FFFFFF; padding: 100px 0;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: start;">
+    <div data-reveal>
+      <span style="font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #C9A84C;">Contacto</span>
+      <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.14; letter-spacing: -.02em; color: #15234F; margin: 12px 0 0;">¿Tu institución necesita mejorar?</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: #5A6273; margin: 16px 0 34px;">Agenda una consulta inicial sin costo y descubre cómo AKADEM puede ayudarte.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(27,45,107,.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/emblem.png" alt="" style="width: 24px;"></div>
+          <div><span style="display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #B8923A;">Ubicación</span><span style="display: block; font-size: 15px; color: #2A3142; margin-top: 2px;">Playa del Carmen, Quintana Roo</span></div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(27,45,107,.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px;">✉</div>
+          <div><span style="display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #B8923A;">Correo</span><a href="mailto:akadem@email.com" style="display: block; font-size: 15px; color: #2A3142; margin-top: 2px; text-decoration: none;">akadem@email.com</a></div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(27,45,107,.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px;">✆</div>
+          <div><span style="display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #B8923A;">WhatsApp</span><a href="https://wa.me/" style="display: block; font-size: 15px; color: #2A3142; margin-top: 2px; text-decoration: none;">+52 ___ ___ ____</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal style="background: #F6F7FA; border: 1px solid #ECEEF2; border-radius: 18px; padding: 34px; box-shadow: 0 18px 44px rgba(27,45,107,.07);">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align: center; padding: 40px 10px;">
+          <div style="width: 64px; height: 64px; margin: 0 auto; border-radius: 50%; background: rgba(201,168,76,.16); color: #B8923A; display: flex; align-items: center; justify-content: center; font-size: 30px;">✓</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 24px; color: #15234F; margin: 20px 0 8px;">¡Mensaje enviado!</h3>
+          <p style="font-size: 15px; line-height: 1.6; color: #5A6273; margin: 0;">Gracias por escribirnos. Te contactaremos muy pronto para agendar tu diagnóstico.</p>
+          <button onClick="{{ reset }}" style="margin-top: 22px; background: none; border: 1.5px solid #1B2D6B; color: #1B2D6B; font-weight: 600; font-size: 14px; padding: 11px 22px; border-radius: 8px; cursor: pointer;" style-hover="background: #1B2D6B; color: #FFFFFF;">Enviar otro mensaje</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ onSubmit }}">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 600; color: #3A4254;">Nombre completo<input required type="text" placeholder="Tu nombre" style="font-family: 'Inter'; font-size: 14.5px; padding: 11px 13px; border: 1.5px solid #E0E3EA; border-radius: 8px; background: #FFFFFF; color: #1F2433; transition: all .15s ease;"></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 600; color: #3A4254;">Institución<input required type="text" placeholder="Nombre del colegio" style="font-family: 'Inter'; font-size: 14.5px; padding: 11px 13px; border: 1.5px solid #E0E3EA; border-radius: 8px; background: #FFFFFF; color: #1F2433; transition: all .15s ease;"></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 600; color: #3A4254;">Correo electrónico<input required type="email" placeholder="correo@institucion.com" style="font-family: 'Inter'; font-size: 14.5px; padding: 11px 13px; border: 1.5px solid #E0E3EA; border-radius: 8px; background: #FFFFFF; color: #1F2433; transition: all .15s ease;"></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 600; color: #3A4254;">Teléfono<input type="tel" placeholder="Opcional" style="font-family: 'Inter'; font-size: 14.5px; padding: 11px 13px; border: 1.5px solid #E0E3EA; border-radius: 8px; background: #FFFFFF; color: #1F2433; transition: all .15s ease;"></label>
+          </div>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 600; color: #3A4254; margin-top: 14px;">¿En qué área necesitas apoyo?<select required style="font-family: 'Inter'; font-size: 14.5px; padding: 11px 13px; border: 1.5px solid #E0E3EA; border-radius: 8px; background: #FFFFFF; color: #1F2433; transition: all .15s ease;">
+            <option value="">Selecciona un servicio…</option>
+            <sc-for list="{{ serviceTitles }}" as="opt" hint-placeholder-count="6"><option value="{{ opt }}">{{ opt }}</option></sc-for>
+            <option value="No estoy seguro">No estoy seguro / quiero orientación</option>
+          </select></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; font-weight: 600; color: #3A4254; margin-top: 14px;">Mensaje<textarea rows="4" placeholder="Cuéntanos brevemente qué está pasando en tu institución…" style="font-family: 'Inter'; font-size: 14.5px; padding: 11px 13px; border: 1.5px solid #E0E3EA; border-radius: 8px; background: #FFFFFF; color: #1F2433; resize: vertical; transition: all .15s ease;"></textarea></label>
+          <button type="submit" style="width: 100%; margin-top: 20px; background: #C9A84C; color: #15234F; font-family: 'Inter'; font-weight: 700; font-size: 15.5px; padding: 15px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 10px 24px rgba(201,168,76,.26); transition: transform .2s ease, background .2s ease;" style-hover="background: #D8BC6A; transform: translateY(-2px);">Enviar mensaje</button>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background: #0F1D4A; color: #FFFFFF; padding: 64px 0 32px;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.12);">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center;"><img src="assets/emblem.png" alt="AKADEM" style="width: 32px;"></div>
+          <span style="font-family: 'Inter'; font-weight: 700; font-size: 24px; letter-spacing: .18em;">AKA<span style="color: #C9A84C;">·</span>DEM</span>
+        </div>
+        <p style="font-family: 'Playfair Display', serif; font-size: 18px; color: #D8BC6A; margin: 18px 0 0;">Decide hoy, construye tu futuro.</p>
+        <p style="font-size: 13.5px; line-height: 1.6; color: #98A0BD; margin: 12px 0 0; max-width: 38ch;">Consultoría organizacional especializada en educación. Un proyecto académico de la Licenciatura en Pedagogía del TUP — Playa del Carmen, Q. Roo.</p>
+      </div>
+      <div>
+        <span style="display: block; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #8A93B2; margin-bottom: 16px;">Navegación</span>
+        <div style="display: flex; flex-direction: column; gap: 11px;">
+          <a href="#inicio" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">Inicio</a>
+          <a href="#nosotros" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">Nosotros</a>
+          <a href="#servicios" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">Servicios</a>
+          <a href="#testimonios" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">Testimonios</a>
+          <a href="#contacto" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">Contacto</a>
+        </div>
+      </div>
+      <div>
+        <span style="display: block; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #8A93B2; margin-bottom: 16px;">Contacto</span>
+        <div style="display: flex; flex-direction: column; gap: 11px;">
+          <span style="font-size: 14px; color: #C8CEE0;">Playa del Carmen, Q. Roo</span>
+          <a href="mailto:akadem@email.com" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">akadem@email.com</a>
+          <a href="https://wa.me/" style="font-size: 14px; color: #C8CEE0; text-decoration: none;" style-hover="color: #D8BC6A;">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding-top: 24px;">
+      <span style="font-size: 12.5px; color: #7A84A5;">© {{ year }} AKADEM. Todos los derechos reservados.</span>
+      <span style="font-size: 12.5px; color: #7A84A5;">Tecnológico Universitario de Playacar (TUP) · Licenciatura en Pedagogía</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { expanded: -1, sent: false };
+
+  componentDidMount() {
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); this._io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach((el) => this._io.observe(el));
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+
+  renderVals() {
+    const navy = '#1B2D6B', gold = '#C9A84C';
+    const SERVICES = [
+      { title: 'Diagnóstico Integral Institucional',
+        ayuda: 'Identifica fallas estructurales en comunicación, trato y percepción del servicio — la base de toda mejora posterior.',
+        incluye: ['Observación de canales de comunicación escolar', 'Encuestas a padres de familia y personal', 'Entrevistas a directivos y docentes', 'Evaluación de experiencia y satisfacción', 'Mapa de problemáticas clave'],
+        noIncluye: 'Diseño de soluciones · Capacitación · Implementación de cambios.' },
+      { title: 'Capacitación en Atención, Trato y Comunicación Escolar',
+        ayuda: 'Mejora la calidad del servicio humano, reduce conflictos y aumenta la claridad en la comunicación con las familias.',
+        incluye: ['Comunicación asertiva en el entorno escolar', 'Manejo de quejas y conflictos', 'Escucha activa y empatía', 'Simulación de casos reales'],
+        noIncluye: 'Diseño de protocolos · Evaluación institucional · Implementación operativa.' },
+      { title: 'Diseño de Protocolos de Atención y Seguimiento Escolar',
+        ayuda: 'Reduce la improvisación y asegura una atención ordenada, rápida y consistente en toda la escuela.',
+        incluye: ['Flujos de atención para solicitudes, quejas e incidencias', 'Tiempos de respuesta definidos', 'Roles y responsabilidades', 'Formatos de seguimiento'],
+        noIncluye: 'Capacitación del personal · Ejecución diaria · Evaluación de resultados.' },
+      { title: 'Estrategia de Experiencia y Fidelización de Familias',
+        ayuda: 'Incrementa la satisfacción y la permanencia mejorando la experiencia en momentos clave del ciclo escolar.',
+        incluye: ['Diseño de experiencia escolar por etapas', 'Estrategias de integración escuela–familia', 'Comunicación emocional institucional', 'Mejoras en puntos de contacto clave'],
+        noIncluye: 'Diagnóstico inicial · Protocolos internos · Capacitación.' },
+      { title: 'Estrategia de Imagen y Posicionamiento Institucional',
+        ayuda: 'Mejora la reputación de la escuela y genera mayor confianza en la calidad de su servicio educativo.',
+        incluye: ['Mensajes clave de identidad institucional', 'Estrategia de comunicación externa', 'Lineamientos para redes sociales escolares', 'Recomendaciones de posicionamiento comunitario'],
+        noIncluye: 'Atención interna · Diagnóstico · Capacitación o protocolos.' },
+      { title: 'Evaluación del Clima Organizacional Escolar',
+        ayuda: 'Detecta factores que afectan la motivación, la colaboración y el desempeño del equipo — y, con ello, el servicio a las familias.',
+        incluye: ['Encuestas de clima laboral', 'Entrevistas al personal', 'Identificación de áreas de conflicto', 'Análisis de liderazgo y trabajo en equipo', 'Informe de resultados y recomendaciones'],
+        noIncluye: 'Capacitación · Mediación de conflictos · Implementación de mejoras.' },
+    ];
+    const services = SERVICES.map((s, i) => {
+      const open = this.state.expanded === i;
+      return Object.assign({}, s, {
+        num: String(i + 1).padStart(2, '0'),
+        open,
+        label: open ? 'Ver menos' : 'Ver más',
+        caret: open ? 'rotate(180deg)' : 'rotate(0deg)',
+        onToggle: () => this.setState({ expanded: open ? -1 : i }),
+      });
+    });
+
+    const ringNavy = 'linear-gradient(135deg, #1B2D6B, #2B3F86)';
+    const ringGold = 'linear-gradient(135deg, #C9A84C, #E0C878)';
+    const ringGray = 'linear-gradient(135deg, #C2C7D2, #DDE1E8)';
+    const team = [
+      { name: 'Ángel Eduardo Tuz Rejón', tag: 'Dirección', role: 'Director General. Guía y supervisa la empresa, toma decisiones estratégicas y representa a AKADEM.', ring: ringNavy, initials: 'AT', initColor: navy },
+      { name: 'Damaris Izel Miss Arcos', tag: 'Innovación', role: 'Especialista en Innovación y Evaluación Educativa. Evalúa procesos y propone estrategias innovadoras.', ring: ringGold, initials: 'DM', initColor: '#B8923A' },
+      { name: 'Paula Estefanía Pech Lugo', tag: 'Comunicación', role: 'Especialista en Marketing y Comunicación. Fortalece la imagen de AKADEM y su difusión.', ring: ringNavy, initials: 'PP', initColor: navy },
+      { name: 'Kenia Estrella Álvarez Castro', tag: 'Consultoría', role: 'Consultora Educativa. Realiza diagnósticos y propone mejoras en los procesos de enseñanza y aprendizaje.', ring: ringGold, initials: 'KA', initColor: '#B8923A' },
+      { name: 'Vacante', tag: 'Vinculación', role: 'Gestor/a de Desarrollo y Vinculación. Crea alianzas con escuelas y busca oportunidades de expansión.', ring: ringGray, initials: '?', initColor: '#9AA1AE' },
+      { name: 'Vacante', tag: 'Finanzas', role: 'Administrador/a Financiero/a. Lleva el control económico: presupuestos, pagos y documentación.', ring: ringGray, initials: '?', initColor: '#9AA1AE' },
+    ];
+
+    const valores = [
+      { n: '01', title: 'Profesionalismo', desc: 'Preparación, responsabilidad y calidad en cada servicio.' },
+      { n: '02', title: 'Integridad', desc: 'Ética, honestidad y transparencia en cada proceso.' },
+      { n: '03', title: 'Innovación', desc: 'Soluciones creativas para los desafíos educativos.' },
+      { n: '04', title: 'Excelencia', desc: 'Resultados de alto impacto mediante la mejora continua.' },
+      { n: '05', title: 'Desarrollo', desc: 'Crecimiento del talento académico, personal y profesional.' },
+    ];
+
+    const testimonials = [
+      { quote: 'Aquí aparecerá el testimonio de un directivo sobre su experiencia trabajando con AKADEM.', name: 'Nombre del directivo', org: 'Institución educativa' },
+      { quote: 'Espacio reservado para el comentario de una institución sobre los resultados obtenidos.', name: 'Nombre del directivo', org: 'Institución educativa' },
+      { quote: 'Próximamente: la opinión de una escuela aliada sobre la mejora en su atención y comunicación.', name: 'Nombre del directivo', org: 'Institución educativa' },
+    ];
+
+    return {
+      services,
+      serviceTitles: SERVICES.map((s) => s.title),
+      team,
+      valores,
+      testimonials,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false }),
+      year: new Date().getFullYear(),
+    };
+  }
+}
+</script>
+</body>
+</html>
