@@ -1,8 +1,11 @@
+import tuzImg from '@assets/person/tuz.webp';
+import damarisImg from '@assets/person/damaris.webp';
+import paulaImg from '@assets/person/paula.webp';
+import keniaImg from '@assets/person/kenia.webp';
+
 const ringNavy = "linear-gradient(135deg, #1B2D6B, #2B3F86)";
 const ringGold = "linear-gradient(135deg, #C9A84C, #E0C878)";
 const ringGray = "linear-gradient(135deg, #C2C7D2, #DDE1E8)";
-
-const base = import.meta.env.BASE_URL;
 
 export const SERVICES = [
   {
@@ -93,7 +96,7 @@ export const TEAM = [
     ring: ringNavy,
     initials: "AT",
     initColor: "#1B2D6B",
-    img: `${base}assets/person/tuz.webp`,
+    img: tuzImg,
   },
   {
     name: "Damaris Izel Miss Arcos",
@@ -102,7 +105,7 @@ export const TEAM = [
     ring: ringGold,
     initials: "DM",
     initColor: "#B8923A",
-    img: `${base}assets/person/damaris.webp`,
+    img: damarisImg,
   },
   {
     name: "Paula Estefanía Pech Lugo",
@@ -111,7 +114,7 @@ export const TEAM = [
     ring: ringNavy,
     initials: "PP",
     initColor: "#1B2D6B",
-    img: `${base}assets/person/paula.webp`,
+    img: paulaImg,
   },
   {
     name: "Kenia Estrella Álvarez Castro",
@@ -120,7 +123,7 @@ export const TEAM = [
     ring: ringGold,
     initials: "KA",
     initColor: "#B8923A",
-    img: `${base}assets/person/kenia.webp`,
+    img: keniaImg,
   },
   {
     name: "Vacante",
