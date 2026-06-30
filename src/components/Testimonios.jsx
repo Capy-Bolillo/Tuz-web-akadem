@@ -1,125 +1,167 @@
-import { TESTIMONIALS } from '../data';
-
-const CASE_COLS = [
-  { label: 'Problema', text: 'Comentarios negativos de padres por la atención y la comunicación, afectando la imagen y la captación de alumnos.' },
-  { label: 'Intervención', text: 'Diagnóstico integral, encuesta a padres, guía de entrevista al personal y propuesta completa de servicios.' },
-  { label: 'Resultado esperado', text: 'Mejor calidad de servicio, comunicación más clara y una experiencia de atención que retiene familias.' },
-];
-
-const RULE_GOLD  = { height: '1px', background: '#C9A84C', opacity: .7 };
-const RULE_MUTED = { height: '1px', background: 'rgba(255,255,255,.10)' };
+import { CASOS } from '../data';
 
 export default function Testimonios() {
   return (
     <section
       id="testimonios"
-      className="ak-section-pad"
       style={{
-        background: '#15234F',
+        background: '#0F1C42',
         color: '#FFFFFF',
         padding: '100px 0',
-        backgroundImage: 'radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px)',
-        backgroundSize: '28px 28px',
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
         {/* Encabezado */}
-        <div data-reveal="" style={{ maxWidth: '680px', margin: '0 0 64px' }}>
-          <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#D8BC6A' }}>
-            Casos de estudio
-          </span>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 700,
-            fontSize: 'clamp(30px, 3.6vw, 48px)',
-            lineHeight: 1.1,
-            letterSpacing: '-.025em',
-            margin: '14px 0 0',
+        <div
+          data-reveal=""
+          style={{
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
+            marginBottom: '72px',
+            gap: '24px',
+            flexWrap: 'wrap',
+          }}
+        >
+          <div>
+            <span style={{
+              fontSize: '11px',
+              fontWeight: 700,
+              letterSpacing: '.18em',
+              textTransform: 'uppercase',
+              color: '#C9A84C',
+            }}>
+              Casos de éxito
+            </span>
+            <h2 style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              fontSize: 'clamp(30px, 3.6vw, 50px)',
+              lineHeight: 1.05,
+              letterSpacing: '-.03em',
+              margin: '12px 0 0',
+            }}>
+              Resultados que<br />las familias notan.
+            </h2>
+          </div>
+          <p style={{
+            fontSize: '14px',
+            lineHeight: 1.7,
+            color: '#6B7899',
+            maxWidth: '30ch',
+            margin: 0,
+            textAlign: 'right',
           }}>
-            El diagnóstico<br />precede al consejo.
-          </h2>
-        </div>
-
-        {/* Caso activo: St. Patrick */}
-        <div data-reveal="">
-          <div style={RULE_GOLD} />
-          <div className="ak-caso-activo" style={{ padding: '36px 0 32px', display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'flex-start', gap: '24px' }}>
-            <div>
-              <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#D8BC6A', display: 'block', marginBottom: '12px' }}>
-                Caso activo
-              </span>
-              <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 2.4vw, 32px)', margin: 0, lineHeight: 1.15 }}>
-                Colegio St. Patrick
-              </h3>
-            </div>
-            <p style={{ fontSize: '13px', color: '#6B7490', margin: 0, textAlign: 'right', lineHeight: 1.6 }}>
-              Institución privada de nivel básico<br />Playa del Carmen, Q. Roo
-            </p>
-          </div>
-
-          <div className="ak-grid-case-inner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 0, paddingBottom: '40px' }}>
-            {CASE_COLS.map((col, idx) => (
-              <div
-                key={col.label}
-                className="ak-case-col"
-                style={{
-                  padding: idx === 0 ? '0 28px 0 0' : '0 28px',
-                  borderLeft: idx === 0 ? 'none' : '1px solid rgba(255,255,255,.12)',
-                }}
-              >
-                <span style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: '#D8BC6A', display: 'block', marginBottom: '10px' }}>
-                  {col.label}
-                </span>
-                <p style={{ fontSize: '13.5px', lineHeight: 1.7, color: '#C5CDE2', margin: 0 }}>{col.text}</p>
-              </div>
-            ))}
-          </div>
-          <div style={RULE_MUTED} />
+            Cada intervención parte de un diagnóstico honesto y termina con impacto medible.
+          </p>
         </div>
 
         {/* Filas editoriales */}
         <div data-stagger="">
-          {TESTIMONIALS.map((t, i) => (
+          {CASOS.map((c, i) => (
             <div key={i} className="ak-stagger-item">
-              <div className="ak-case-row-grid" style={{ padding: '40px 0' }}>
+              {/* Línea superior */}
+              <div style={{ height: '1px', background: i === 0 ? '#C9A84C' : 'rgba(255,255,255,.10)' }} />
 
-                {/* Columna izquierda: índice + categoría + institución */}
+              <div className="ak-caso-row" style={{
+                display: 'grid',
+                gridTemplateColumns: '140px 1fr 1fr',
+                gap: '0 56px',
+                padding: '52px 0',
+                alignItems: 'start',
+              }}>
+
+                {/* Col 1: índice + tag + location */}
                 <div>
-                  <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: '#C9A84C', display: 'block' }}>
-                    {'0' + (i + 1)} · {t.tag}
+                  <span style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    color: 'rgba(201,168,76,.5)',
+                    display: 'block',
+                    marginBottom: '20px',
+                    letterSpacing: '.04em',
+                  }}>
+                    {c.index}
                   </span>
-                  <span style={{ fontSize: '12px', color: '#505A75', display: 'block', marginTop: '8px', lineHeight: 1.5 }}>
-                    {t.school}
+                  <span style={{
+                    fontSize: '10px',
+                    fontWeight: 700,
+                    letterSpacing: '.14em',
+                    textTransform: 'uppercase',
+                    color: '#C9A84C',
+                    display: 'block',
+                    lineHeight: 1.5,
+                    marginBottom: '32px',
+                  }}>
+                    {c.tag}
+                  </span>
+                  <span style={{
+                    fontSize: '11.5px',
+                    color: '#3D4D6E',
+                    display: 'block',
+                    lineHeight: 1.55,
+                  }}>
+                    {c.location}
                   </span>
                 </div>
 
-                {/* Columna derecha: titular + cuerpo + impacto */}
-                <div>
+                {/* Col 2: métrica protagonista */}
+                <div style={{ borderLeft: '1px solid rgba(255,255,255,.08)', paddingLeft: '56px' }}>
+                  <p style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontWeight: 700,
+                    fontSize: 'clamp(48px, 5.5vw, 80px)',
+                    lineHeight: 1,
+                    letterSpacing: '-.04em',
+                    color: '#FFFFFF',
+                    margin: '0 0 12px',
+                  }}>
+                    {c.metric}
+                  </p>
+                  <p style={{
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    letterSpacing: '.06em',
+                    textTransform: 'uppercase',
+                    color: '#C9A84C',
+                    margin: 0,
+                  }}>
+                    {c.metricLabel}
+                  </p>
+                </div>
+
+                {/* Col 3: titular + cita */}
+                <div style={{ borderLeft: '1px solid rgba(255,255,255,.08)', paddingLeft: '56px' }}>
                   <h3 style={{
                     fontFamily: "'Playfair Display', serif",
                     fontWeight: 700,
-                    fontSize: 'clamp(17px, 1.6vw, 21px)',
+                    fontSize: 'clamp(17px, 1.6vw, 22px)',
+                    lineHeight: 1.25,
+                    letterSpacing: '-.02em',
                     color: '#FFFFFF',
-                    margin: '0 0 14px',
-                    lineHeight: 1.35,
-                    letterSpacing: '-.01em',
-                    maxWidth: '54ch',
+                    margin: '0 0 20px',
                   }}>
-                    {t.headline}
+                    {c.headline}
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#A8B2CC', lineHeight: 1.75, margin: '0 0 20px', maxWidth: '65ch' }}>
-                    {t.body}
-                  </p>
-                  <p style={{ fontSize: '12px', color: '#5C6680', margin: 0, letterSpacing: '.01em' }}>
-                    {t.impact.join(' · ')}
+                  <p style={{
+                    fontSize: '14px',
+                    lineHeight: 1.8,
+                    color: '#7B89A8',
+                    margin: 0,
+                    fontStyle: 'italic',
+                  }}>
+                    "{c.quote}"
                   </p>
                 </div>
 
               </div>
-              <div style={RULE_MUTED} />
             </div>
           ))}
+
+          {/* Línea de cierre */}
+          <div style={{ height: '1px', background: 'rgba(255,255,255,.10)' }} />
         </div>
 
       </div>

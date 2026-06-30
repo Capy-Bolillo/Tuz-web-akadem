@@ -173,26 +173,80 @@ export const VALORES = [
   },
 ];
 
-export const TESTIMONIALS = [
+export const RESENAS = [
   {
-    tag: "Diagnóstico Institucional",
-    school: "Institución privada · Cancún, Q. Roo",
-    headline: "Familias insatisfechas y matrícula en riesgo",
-    body: "Padres reportaban atención fría e inconsistente en recepción. El diagnóstico integral reveló los puntos de quiebre exactos: encuesta a padres, entrevistas al personal y mapa completo de flujos de atención.",
-    impact: ["Puntos críticos identificados", "Base sólida para rediseñar la atención", "Plan entregado en 3 semanas"],
+    quote: "Desde el primer contacto sentí que entendían exactamente lo que necesitaba. El proceso fue claro, ordenado y los resultados superaron mis expectativas.",
+    author: "Directora general",
+    org: "Institución privada · Cancún, Q. Roo",
+    stars: 5,
   },
   {
-    tag: "Capacitación",
-    school: "Escuela bilingüe · Playa del Carmen, Q. Roo",
-    headline: "Sin herramientas, el personal convierte quejas en conflictos",
-    body: "El equipo administrativo carecía de protocolo para situaciones difíciles con padres. Taller de comunicación asertiva y simulación de casos reales con todo el personal del colegio.",
-    impact: ["Protocolo claro ante situaciones difíciles", "Reducción de conflictos con familias", "Mejor clima en el equipo"],
+    quote: "Lo que más me sorprendió fue la velocidad. En pocas semanas ya teníamos un diagnóstico completo y un plan de acción concreto. El equipo de AKADEM sabe lo que hace.",
+    author: "Coordinador académico",
+    org: "Centro educativo · Playa del Carmen, Q. Roo",
+    stars: 5,
   },
   {
-    tag: "Protocolos de Atención",
-    school: "Institución educativa · Mérida, Yuc.",
-    headline: "La improvisación cotidiana erosiona la confianza institucional",
-    body: "Sin flujos definidos, cada empleado resolvía a su criterio: respuestas tardías, mensajes contradictorios, familias desorientadas. Diseño de protocolos, flujos de respuesta y formatos de seguimiento a la medida del colegio.",
-    impact: ["Atención estandarizada y predecible", "Tiempos de respuesta definidos", "Documentación que permanece en el equipo"],
+    quote: "Llevábamos meses buscando soluciones por nuestra cuenta sin resultados. AKADEM llegó, identificó el problema de fondo y nos dio herramientas reales para resolverlo.",
+    author: "Subdirectora",
+    org: "Escuela bilingüe · Mérida, Yuc.",
+    stars: 5,
+  },
+  {
+    quote: "Muy profesionales y cercanos a la vez. No te venden fórmulas genéricas, diseñan algo para tu institución específicamente. Totalmente recomendados.",
+    author: "Director administrativo",
+    org: "Institución educativa · Q. Roo",
+    stars: 5,
+  },
+  {
+    quote: "El taller de atención y comunicación cambió la dinámica de nuestro equipo. Los padres lo notaron y empezamos a recibir comentarios positivos que antes no teníamos.",
+    author: "Coordinadora de vinculación",
+    org: "Colegio privado · Cancún, Q. Roo",
+    stars: 5,
+  },
+  {
+    quote: "Trabajo serio, resultados concretos. Si tu escuela necesita mejorar la relación con las familias, AKADEM es la respuesta. No lo duden.",
+    author: "Directora fundadora",
+    org: "Instituto educativo · Q. Roo",
+    stars: 5,
+  },
+];
+
+export const CASOS = [
+  {
+    index: "01",
+    tag: "Diagnóstico + Fidelización",
+    location: "Institución privada · Cancún, Q. Roo",
+    headline: "Matrículas en aumento, familias que no se van",
+    metric: "7 de 8",
+    metricLabel: "familias renuevan cada ciclo",
+    quote: "En cuanto empezamos a trabajar con AKADEM el cambio fue notorio. Hoy varias familias nos recomiendan solas.",
+  },
+  {
+    index: "02",
+    tag: "Capacitación en Atención",
+    location: "Escuela bilingüe · Playa del Carmen, Q. Roo",
+    headline: "De la queja constante al reconocimiento de la comunidad",
+    metric: "–50 %",
+    metricLabel: "quejas de padres en un semestre",
+    quote: "El equipo aprendió a atender a los padres con calidez y claridad. Hoy somos la institución más recomendada en la zona.",
+  },
+  {
+    index: "03",
+    tag: "Diseño de Protocolos",
+    location: "Institución educativa · Mérida, Yuc.",
+    headline: "En tres semanas ordenamos lo que tardamos años en descuidar",
+    metric: "3 sem.",
+    metricLabel: "para entregar protocolos completos",
+    quote: "Con los protocolos de AKADEM, el equipo trabaja con una sola voz. Las familias lo notaron desde el primer día.",
+  },
+  {
+    index: "04",
+    tag: "Imagen y Posicionamiento",
+    location: "Centro educativo · Quintana Roo",
+    headline: "Más consultas de nuevas familias que en cualquier año anterior",
+    metric: "×2",
+    metricLabel: "solicitudes de nuevas familias",
+    quote: "AKADEM nos ayudó a comunicar lo que realmente somos. Los resultados llegaron más rápido de lo que esperaba.",
   },
 ];

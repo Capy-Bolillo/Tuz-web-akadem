@@ -282,6 +282,8 @@ input:focus, select:focus, textarea:focus {
 .ak-grid-case-inner{ }
 .ak-case-col       { }
 .ak-grid-testimonials { }
+.ak-casos-grid        { }
+.ak-resenas-grid      { }
 .ak-grid-contact   { }
 .ak-grid-form      { }
 .ak-grid-footer-top{ }
@@ -292,6 +294,9 @@ input:focus, select:focus, textarea:focus {
 @media (max-width: 1024px) {
   .ak-grid-values   { grid-template-columns: repeat(3, 1fr) !important; }
   .ak-grid-services { grid-template-columns: repeat(2, 1fr) !important; }
+  .ak-resenas-grid  { grid-template-columns: repeat(2, 1fr) !important; }
+  .ak-caso-row      { grid-template-columns: 120px 1fr !important; gap: 0 32px !important; }
+  .ak-caso-row > div:last-child { grid-column: 2; border-left: none !important; padding-left: 0 !important; padding-top: 28px; }
   .ak-grid-case     { grid-template-columns: 1fr !important; }
   .ak-grid-case-inner { grid-template-columns: 1fr !important; }
   .ak-case-col      { padding: 16px 0 !important; border-left: none !important; border-top: 1px solid rgba(255,255,255,.12); }
@@ -324,9 +329,13 @@ input:focus, select:focus, textarea:focus {
   .ak-grid-case      { grid-template-columns: 1fr !important; }
   .ak-grid-case-inner{ grid-template-columns: 1fr !important; }
   .ak-grid-testimonials { grid-template-columns: 1fr !important; }
+  .ak-caso-row          { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .ak-caso-row > div    { border-left: none !important; padding-left: 0 !important; }
+  .ak-caso-row > div:nth-child(2) { padding: 24px 0 !important; }
+  .ak-caso-row > div:last-child   { padding-top: 0 !important; }
+  .ak-resenas-grid      { grid-template-columns: 1fr !important; }
+  .ak-resena-card       { padding: 28px 20px !important; }
   .ak-case-row-grid { grid-template-columns: 1fr !important; gap: 12px 0 !important; }
-  .ak-caso-activo   { grid-template-columns: 1fr !important; }
-  .ak-caso-activo > p { text-align: left !important; }
 
   .ak-grid-contact   { grid-template-columns: 1fr !important; gap: 40px !important; }
   .ak-grid-form      { grid-template-columns: 1fr !important; }
