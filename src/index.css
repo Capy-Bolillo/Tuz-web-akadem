@@ -257,6 +257,16 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ==============================
+   EDITORIAL CASE ROWS
+   ============================== */
+.ak-case-row-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0 56px;
+  align-items: start;
+}
+
+/* ==============================
    RESPONSIVE LAYOUT CLASSES
    ============================== */
 .ak-hero-section   { }
@@ -286,6 +296,7 @@ input:focus, select:focus, textarea:focus {
   .ak-grid-case-inner { grid-template-columns: 1fr !important; }
   .ak-case-col      { padding: 16px 0 !important; border-left: none !important; border-top: 1px solid rgba(255,255,255,.12); }
   .ak-case-col:first-child { border-top: none !important; padding-top: 0 !important; }
+  .ak-case-row-grid { grid-template-columns: 160px 1fr; gap: 0 36px; }
 
   /* Org chart: tighter spacing */
   .org-depts { gap: 10px; }
@@ -313,6 +324,9 @@ input:focus, select:focus, textarea:focus {
   .ak-grid-case      { grid-template-columns: 1fr !important; }
   .ak-grid-case-inner{ grid-template-columns: 1fr !important; }
   .ak-grid-testimonials { grid-template-columns: 1fr !important; }
+  .ak-case-row-grid { grid-template-columns: 1fr !important; gap: 12px 0 !important; }
+  .ak-caso-activo   { grid-template-columns: 1fr !important; }
+  .ak-caso-activo > p { text-align: left !important; }
 
   .ak-grid-contact   { grid-template-columns: 1fr !important; gap: 40px !important; }
   .ak-grid-form      { grid-template-columns: 1fr !important; }

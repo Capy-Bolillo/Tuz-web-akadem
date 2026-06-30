@@ -2,6 +2,7 @@ import tuzImg from '@assets/person/tuz.webp';
 import damarisImg from '@assets/person/damaris.webp';
 import paulaImg from '@assets/person/paula.webp';
 import keniaImg from '@assets/person/kenia.webp';
+import rosaImg from '@assets/person/Rosa-Martínez.jpeg';
 
 const ringNavy = "linear-gradient(135deg, #1B2D6B, #2B3F86)";
 const ringGold = "linear-gradient(135deg, #C9A84C, #E0C878)";
@@ -126,12 +127,13 @@ export const TEAM = [
     img: keniaImg,
   },
   {
-    name: "Vacante",
+    name: "Rosa Martínez",
     tag: "Vinculación",
-    role: "Gestor/a de Desarrollo y Vinculación. Crea alianzas con escuelas y busca oportunidades de expansión.",
-    ring: ringGray,
-    initials: "?",
-    initColor: "#9AA1AE",
+    role: "Gestora de Desarrollo y Vinculación Empresarial. Crea alianzas con escuelas y busca oportunidades de expansión.",
+    ring: ringNavy,
+    initials: "RM",
+    initColor: "#1B2D6B",
+    img: rosaImg,
   },
   {
     name: "Vacante",
@@ -173,21 +175,24 @@ export const VALORES = [
 
 export const TESTIMONIALS = [
   {
-    quote:
-      "Aquí aparecerá el testimonio de un directivo sobre su experiencia trabajando con AKADEM.",
-    name: "Nombre del directivo",
-    org: "Institución educativa",
+    tag: "Diagnóstico Institucional",
+    school: "Institución privada · Cancún, Q. Roo",
+    headline: "Familias insatisfechas y matrícula en riesgo",
+    body: "Padres reportaban atención fría e inconsistente en recepción. El diagnóstico integral reveló los puntos de quiebre exactos: encuesta a padres, entrevistas al personal y mapa completo de flujos de atención.",
+    impact: ["Puntos críticos identificados", "Base sólida para rediseñar la atención", "Plan entregado en 3 semanas"],
   },
   {
-    quote:
-      "Espacio reservado para el comentario de una institución sobre los resultados obtenidos.",
-    name: "Nombre del directivo",
-    org: "Institución educativa",
+    tag: "Capacitación",
+    school: "Escuela bilingüe · Playa del Carmen, Q. Roo",
+    headline: "Sin herramientas, el personal convierte quejas en conflictos",
+    body: "El equipo administrativo carecía de protocolo para situaciones difíciles con padres. Taller de comunicación asertiva y simulación de casos reales con todo el personal del colegio.",
+    impact: ["Protocolo claro ante situaciones difíciles", "Reducción de conflictos con familias", "Mejor clima en el equipo"],
   },
   {
-    quote:
-      "Próximamente: la opinión de una escuela aliada sobre la mejora en su atención y comunicación.",
-    name: "Nombre del directivo",
-    org: "Institución educativa",
+    tag: "Protocolos de Atención",
+    school: "Institución educativa · Mérida, Yuc.",
+    headline: "La improvisación cotidiana erosiona la confianza institucional",
+    body: "Sin flujos definidos, cada empleado resolvía a su criterio: respuestas tardías, mensajes contradictorios, familias desorientadas. Diseño de protocolos, flujos de respuesta y formatos de seguimiento a la medida del colegio.",
+    impact: ["Atención estandarizada y predecible", "Tiempos de respuesta definidos", "Documentación que permanece en el equipo"],
   },
 ];
